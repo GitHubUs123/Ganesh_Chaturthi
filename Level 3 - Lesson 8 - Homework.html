@@ -1,0 +1,92 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Ganesh Chaturthi</title>
+<style>
+.main-banner {
+width: 70%;
+max-height: 500px;
+overflow: hidden;}
+
+.slider {
+overflow: hidden;}
+
+.slides {
+position: relative;
+width: 300%;
+margin-left: 20px;
+padding: 0;
+text-align: left;
+animation: 19s slide-cycle infinite;}
+
+.slides img {
+width: 20%;
+float: left;}
+
+@keyframes slide-cycle {
+0% { left: 0%; }
+28% { left: 0%; }
+33% { left: -100%; }
+61% { left: -200%; }
+66% { left: -200%; }
+95% { left: -200%; }
+100% { left: 0%; }
+}
+
+.apple, .orange {
+width: 100px;
+height: 100px;
+text-align: center;
+border-radius: 40%;
+padding: 10px;
+float: left;
+cursor: pointer;
+margin-left: 20px;
+Margin-right: 20px;
+Clear: both;
+}
+
+.apple2, .orange2 {
+display: none;
+margin-top: 20px;
+}
+
+.text-active {
+display: block;
+}
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>
+$(function() {
+ $(".apple").click(function() {
+  $(".apple2").addClass("text-active");
+  $(".orange2").removeClass("text-active");
+ });
+
+ $(".orange").click(function() {
+  $(".orange2").addClass("text-active");
+  $(".apple2").removeClass("text-active");
+ });
+});
+</script>
+</head>
+<body>
+<h2 class="hello">Ganesh Chaturthi</h2>
+
+<div class="main-banner">
+ <div class="slider">
+  <div class="slides">
+   <img src="OIP (2).jpeg" height = "400px">
+   <img src="OIP (3).jpeg">
+   <img src="OIP (4).jpeg">
+  </div>
+ </div>
+</div>
+<h3 class = "apple">What is Ganesh Chaturthi?</h3>
+<p class="apple2">Ganesh Chaturthi, in Hinduism, is a 10-day festival marking the birth of the elephant-headed deity Ganesha, the god of prosperity and wisdom. Idols of Ganesha are anointed, offered food, and brought to rivers for immersion.</p>
+<br>
+<h3 class = "orange">When is it celebrated?</h3>
+<p class="orange2">It's typically celebrated between August and September.</p>
+</body>
+</html>
