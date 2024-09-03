@@ -1,12 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
+<link href='https://fonts.googleapis.com/css?family=Aclonica' rel='stylesheet'>
 <title>Ganesh Chaturthi</title>
 <style>
+body{
+background-color: #f9f5e7;
+color: #333;}
+
 .main-banner {
 width: 100%;
 max-height: 430px;
-overflow: hidden;}
+overflow: hidden;
+Border-radius: 15px;}
 
 .slider {
 overflow: hidden;}
@@ -38,26 +44,27 @@ margin: 10px;}
 100% { left: 0%; }
 }
 
-.apple, .orange {
+.apple, .orange, .grape {
 Clear: both;
 Padding: 10px;
 }
 
-.apple2, .orange2 {
+.apple2, .orange2, .grape2 {
 display: none;
 margin: 20px;
 Float: left;
 Width: 70%;
+Font-size: 20px;
 }
 
-.apple1, .orange1 {
+.apple1, .orange1, .grape1 {
 Float: left;
-width: 100px;
-height: 100px;
+width: 120px;
+height: 120px;
 text-align: center;
 border-radius: 40%;
 Float: left;
-Background-color: lavender; 
+Background-color: LightSalmon; 
 cursor: pointer;
 margin-left: 20px;
 Margin-right: 20px;
@@ -66,25 +73,48 @@ Padding: 10px;
 .text-active {
 display: block;
 }
+
+.image{
+Width: 75px;
+Height: 75px;
+Display: inline-block;
+Vertical-align: center;}
+
+h6{background-color: rgb(77, 77, 255);
+color: rgb(77, 77, 255);
+Height: 10px;
+Font-size: 5px;
+Margin-top: 40px;}
+
+h1{
+Font-family: Aclonica;
+Display: inline-block;
+Vertical-align: center;
+color: DarkBlue;}
 </style>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <script>
 $(function() {
- $(".apple").click(function() {
-  $(this).find(".apple2").addClass("text-active");
-  $(".orange2").removeClass("text-active");
- });
+    $(".apple1").click(function() {
+        $(".apple2").fadeIn();
+        $(".orange2, .grape2").fadeOut();
+    });
 
- $(".orange").click(function() {
-  $(this).find(".orange2").addClass("text-active");
-  $(".apple2").removeClass("text-active");
- });
+    $(".orange1").click(function() {
+        $(".orange2").fadeIn();
+        $(".apple2, .grape2").fadeOut();
+    });
+
+    $(".grape1").click(function() {
+        $(".grape2").fadeIn();
+        $(".apple2, .orange2").fadeOut();
+    });
 });
 </script>
 </head>
 <body>
-<h2 class="hello">Ganesh Chaturthi</h2>
-
+<h1 class="hello">Ganesh Chaturthi</h1>
+<img src = "image-removebg-preview (2).jpeg" class = "image">
 <div class="main-banner">
  <div class="slider">
   <div class="slides">
@@ -100,13 +130,35 @@ $(function() {
 <div class = "apple">
 <div class = "apple1">
 <h3>What is Ganesh Chaturthi?</h3></div>
-<div class="apple2">Ganesh Chaturthi, in Hinduism, is a 10-day festival marking the birth of the elephant-headed deity Ganesha, the god of prosperity and wisdom. Idols of Ganesha are anointed, offered food, and brought to rivers for immersion.</div>
+<div class="apple2">Ganesh Chaturthi, in Hinduism, is a 10-day festival marking the birth of the elephant-headed deity Ganesha, the god of prosperity and wisdom.</div>
 </div>
 <br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<h6>apple</h6>
 <div class = "orange">
 <div class = "orange1">
 <h3>When is it celebrated?</h3></div>
-<div class="orange2">It's typically celebrated between August and September.</div>
+<div class="orange2">It begins on the fourth day (chaturthi) of the month of Bhadrapada (August–September), the sixth month of the Hindu calendar.</div>
 </div>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<h6>orange</h6>
+<div class = "grape">
+<div class = "grape1">
+<h3>How is Ganesh Chaturthi celebrated?</h3></div>
+<div class="grape2">At the start of the festival, idols of Ganesha are placed on raised platforms in homes or in elaborately decorated outdoor tents. Followed by shhodashopachara, or the 16 ways of paying tribute. Amid the chanting of Vedic hymns from religious texts like the Ganesh Upanishad, the idols are anointed with red sandalwood paste and yellow and red flowers. Ganesha is also offered coconut, jaggery, and 21 modaks (sweet dumplings), considered to be Ganesha’s favourite food.</div>
+</div>
+<footer></footer>
 </body>
 </html>
